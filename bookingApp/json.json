@@ -1,0 +1,793 @@
+{
+  "buildings": [
+    {
+      "id": "1",
+      "placeName": "Impact hub",
+      "address": "Via Aosta, 4, 20155 Milano MI",
+      "placeTypes": [
+        {
+          "id": 1,
+          "label": "CoWorking"
+        },
+        {
+          "id": 2,
+          "label": "Café"
+        }
+      ],
+      "placeServices": [
+        {
+          "id": 9,
+          "label": "Meeting Rooms"
+        },
+        {
+          "id": 5,
+          "label": "AC"
+        },
+        {
+          "id": 3,
+          "label": "Café"
+        },
+        {
+          "id": 1,
+          "label": "Wifi"
+        },
+        {
+          "id": 6,
+          "label": "Power Sockets"
+        }
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean euismod elementum nisi quis.",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 30
+          },
+          {
+            "id": 2,
+            "label": "Meeting Room",
+            "slots": 3
+          },
+          {
+            "id": 4,
+            "label": "Phone booth",
+            "slots": 4
+          }
+        ]
+      },
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "10:00",
+          "closingTime": "18:00"
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "wednesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "thursday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "friday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "saturday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    },
+    {
+      "id": "2",
+      "placeName": "Ranstad Box",
+      "address": "Via S. Vigilio, 1, 20142 Milano MI",
+      "placeTypes": [
+        {
+          "id": 1,
+          "label": "CoWorking"
+        }
+      ],
+      "placeServices": [
+        {
+          "id": 9,
+          "label": "Meeting Rooms"
+        },
+        {
+          "id": 5,
+          "label": "AC"
+        },
+        {
+          "id": 3,
+          "label": "Café"
+        },
+        {
+          "id": 1,
+          "label": "Wifi"
+        },
+        {
+          "id": 6,
+          "label": "Power Sockets"
+        },
+        {
+          "id": 8,
+          "label": "Open Space"
+        }
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean euismod elementum nisi quis.",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 24
+          },
+          {
+            "id": 2,
+            "label": "Meeting Room",
+            "slots": 2
+          },
+          {
+            "id": 4,
+            "label": "Phone booth",
+            "slots": 1
+          }
+        ]
+      },
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "wednesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "thursday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "friday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "saturday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    },
+    {
+      "id": "3",
+      "placeName": "Bovisa Urban Garden",
+      "address": "Via Emilio Broglio, 3, 20158 Milano MI",
+      "placeTypes": [
+        {
+          "id": 2,
+          "label": "Café"
+        }
+      ],
+      "placeServices": [
+        {
+          "id": 3,
+          "label": "Café"
+        },
+        {
+          "id": 1,
+          "label": "Wifi"
+        },
+        {
+          "id": 6,
+          "label": "Power Sockets"
+        }
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean euismod elementum nisi quis.",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 30
+          }
+        ]
+      },
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "wednesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "thursday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "friday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "saturday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "22:00"
+        },
+        "sunday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "22:00"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "placeName": "UniMi BICF",
+      "address": "Via Giovanni Celoria, 18, 20133 Milano MI",
+      "placeTypes": [
+        {
+          "id": 3,
+          "label": "Library"
+        }
+      ],
+      "placeServices": [
+        {
+          "id": 1,
+          "label": "Wifi"
+        },
+        {
+          "id": 6,
+          "label": "Power Sockets"
+        },
+        {
+          "id": 2,
+          "label": "Vending machines"
+        },
+        {
+          "id": 7,
+          "label": "Study Rooms"
+        }
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean euismod elementum nisi quis.",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 54
+          },
+          {
+            "id": 5,
+            "label": "Study Room",
+            "slots": 3
+          },
+          {
+            "id": 3,
+            "label": "Parking slot",
+            "slots": 20
+          },
+          {
+            "id": 2,
+            "label": "Meeting Room",
+            "slots": 2
+          }
+        ]
+      },
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "wednesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "thursday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "friday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "saturday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    },
+    {
+      "id": "5",
+      "placeName": "Libray Casa",
+      "address": "Viale Zara , 76, 20158 Milano MI",
+      "placeTypes": [
+        {
+          "id": 3,
+          "label": "Library"
+        }
+      ],
+      "placeServices": [
+        {
+          "id": 1,
+          "label": "Wifi"
+        },
+        {
+          "id": 6,
+          "label": "Power Sockets"
+        },
+        {
+          "id": 3,
+          "label": "Café"
+        },
+        {
+          "id": 5,
+          "label": "AC"
+        }
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean euismod elementum nisi quis.",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 3
+          }
+        ]
+      },
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "wednesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "thursday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "friday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "saturday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    },
+    {
+      "id": "135d41e9-0009-458f-b6cd-8fb00ec81bdd",
+      "placeName": "sxe",
+      "placeTypes": [
+        {
+          "id": 1,
+          "label": "CoWorking"
+        },
+        {
+          "id": 2,
+          "label": "Café"
+        }
+      ],
+      "address": "www",
+      "description": "eeee",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 23
+          }
+        ]
+      },
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "wednesday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "thursday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "friday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "saturday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    },
+    {
+      "id": "88b85813-5df0-43c6-9f37-fe72f13772a6",
+      "placeName": "CSCSCSC",
+      "placeTypes": [
+        {
+          "id": 2,
+          "label": "Café"
+        },
+        {
+          "id": 4,
+          "label": "Locals"
+        }
+      ],
+      "address": "dwdw",
+      "description": "dwdwd",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 238
+          }
+        ]
+      },
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "wednesday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "thursday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "friday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "saturday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    },
+    {
+      "id": "bad5a6e1-88aa-44a7-85af-b1524248934e",
+      "placeName": "mwdwd",
+      "placeTypes": [
+        {
+          "id": 2,
+          "label": "Café"
+        },
+        {
+          "id": 3,
+          "label": "Library"
+        }
+      ],
+      "address": "dwdwd",
+      "description": "wdwd",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 123
+          },
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 310
+          }
+        ]
+      },
+      "placeServices": [
+        {
+          "id": 4,
+          "label": "Parking Space"
+        },
+        {
+          "id": 5,
+          "label": "AC"
+        },
+        {
+          "id": 7,
+          "label": "Study Rooms"
+        }
+      ],
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "wednesday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "thursday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "friday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "saturday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": false,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    },
+    {
+      "id": "e1b941c8-8e53-40d0-baa7-cb5cfe182365",
+      "placeName": "sdsdd",
+      "placeTypes": [
+        {
+          "id": 1,
+          "label": "CoWorking"
+        },
+        {
+          "id": 3,
+          "label": "Library"
+        }
+      ],
+      "address": "wdwd",
+      "description": "wdwd",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 12
+          }
+        ]
+      },
+      "placeServices": [
+        {
+          "id": 8,
+          "label": "Open Space"
+        },
+        {
+          "id": 6,
+          "label": "Power Sockets"
+        },
+        {
+          "id": 3,
+          "label": "Café"
+        }
+      ],
+      "openingHours": {
+        "monday": {
+          "isClosed": false,
+          "openingTime": "09:00",
+          "closingTime": "18:00"
+        },
+        "tuesday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "wednesday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "thursday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "friday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "saturday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    },
+    {
+      "id": "133a3e38-781c-4ee4-9662-386770a90621",
+      "placeName": "adwfw",
+      "placeTypes": [
+        {
+          "id": 1,
+          "label": "CoWorking"
+        },
+        {
+          "id": 3,
+          "label": "Library"
+        }
+      ],
+      "address": "adwdwdf",
+      "description": "wdwdwd",
+      "bookable": {
+        "item": [
+          {
+            "id": 1,
+            "label": "Desk",
+            "slots": 1313
+          },
+          {
+            "id": 3,
+            "label": "Parking slot",
+            "slots": 22
+          }
+        ]
+      },
+      "placeServices": [
+        {
+          "id": 1,
+          "label": "Wifi"
+        },
+        {
+          "id": 3,
+          "label": "Café"
+        },
+        {
+          "id": 4,
+          "label": "Parking Space"
+        }
+      ],
+      "openingHours": {
+        "monday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "tuesday": {
+          "isClosed": false,
+          "openingTime": "09:30",
+          "closingTime": ""
+        },
+        "wednesday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "thursday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "friday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "saturday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        },
+        "sunday": {
+          "isClosed": true,
+          "openingTime": "",
+          "closingTime": ""
+        }
+      }
+    }
+  ]
+}

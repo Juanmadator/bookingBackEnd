@@ -1,0 +1,325 @@
+openapi: 3.1.0
+info:
+  title: Swagger BookingApp -
+  description: >-
+    This building api will help us to create buildings , show them all in a
+    pagination way
+
+    Will be also possible to update a building based on the id
+  termsOfService: http://localhost/terms
+  contact:
+    email: apiteam@swagger.io
+  version: 1.0.11-oas3.1
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: http://localhost:8080
+tags:
+  - name: buildings
+    description: Everything about your buildings
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+paths:
+  /buildings:
+    post:
+      tags:
+        - buildings
+      summary: Add a new building
+      description: Add a new building to the booking app based on the body
+      operationId: addBuilding
+      requestBody:
+        required: true
+        description: Create a new building
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Building'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Building'
+        '400':
+          description: Invalid input
+        '422':
+          description: Validation exception
+    get:
+      tags:
+        - buildings
+      summary: Get all buildings
+      description: Get all buildings
+      parameters:
+        - name: page
+          in: query
+          description: Page number
+          required: false
+          schema:
+            type: integer
+            default: 1
+        - name: pageSize
+          in: query
+          description: Page size
+          required: false
+          schema:
+            type: integer
+            default: 3
+      responses:
+        '200':
+          description: List of buildings succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                  - pagination
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Building'
+                  pagination:
+                    allOf:
+                      - $ref: '#/components/schemas/PaginationSummary'
+        '404':
+          description: Doesn´t exist any building
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    examples:
+                      - Building not found
+                  message:
+                    type: string
+                    examples:
+                      - The request building doesn´t exist
+  /buildings/update/{id}:
+    put:
+      tags:
+        - buildings
+      summary: Update an existing building by building ID
+      description: Update an existing building based on the Id provided
+      operationId: updateBuilding
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: number
+            examples:
+              - 42
+      requestBody:
+        description: Update an existing building in the booking application
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Building'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Building'
+        '400':
+          description: Invalid ID provided
+        '404':
+          description: Building not found
+  /buildings/{id}:
+    get:
+      tags:
+        - buildings
+      summary: Get a single building
+      description: Get a single building based on the Id
+      operationId: getBuilding
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: number
+            examples:
+              - 30
+      responses:
+        '200':
+          description: Succesfull operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Building'
+        '400':
+          description: Invalid id provided
+        '405':
+          description: Not valid method
+components:
+  schemas:
+    PaginationSummary:
+      type: object
+      required:
+        - currentPage
+        - totalPages
+        - pageSize
+        - totalCount
+      properties:
+        currentPage:
+          type: integer
+          description: Current page
+        totalPages:
+          type: integer
+          description: Total number of pages
+        pageSize:
+          type: integer
+          description: Number of items per each page
+        totalCount:
+          type: integer
+          description: Total count of buildings that currently exists
+    DayOfWeek:
+      type: object
+      properties:
+        day:
+          type: string
+          examples:
+            - MONDAY
+        isClosed:
+          type: boolean
+          examples:
+            - true
+        openingTime:
+          type: string
+          format: time
+          examples:
+            - '09:00:00'
+        closingTime:
+          type: string
+          format: time
+          examples:
+            - '09:00:00'
+    Booking:
+      type: object
+      properties:
+        nameBuilding:
+          type: string
+          examples:
+            - Impact HUB
+        nameBookable:
+          type: string
+          examples:
+            - DESK
+        dayOfMonth:
+          type: string
+          format: date
+          examples:
+            - '2024-04-27'
+        startHour:
+          type: string
+          format: date-time
+          examples:
+            - '2024-04-11T9:00:00Z'
+        finishHour:
+          type: string
+          format: date-time
+          examples:
+            - '2024-04-11T12:00:00Z'
+        duration:
+          type: string
+          examples:
+            - 120 minutes
+        reservingSlots:
+          type: number
+          examples:
+            - 5
+    Building:
+      type: object
+      properties:
+        name:
+          type: string
+          examples:
+            - Coderit
+        location:
+          type: object
+          $ref: '#/components/schemas/Location'
+        placeType:
+          type: object
+          $ref: '#/components/schemas/PlaceType'
+        services:
+          type: array
+          items:
+            $ref: '#/components/schemas/Service'
+        description:
+          type: string
+          examples:
+            - The building was made for students who love studying
+        bookables:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bookable'
+        daysOfWeek:
+          type: array
+          items:
+            $ref: '#/components/schemas/DayOfWeek'
+        photo:
+          type: string
+          examples:
+            - src/main/resources/images/MarcoSexy.png
+      required:
+        - id
+        - name
+        - placeType
+    BuildingResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          examples:
+            - 20
+      allOf:
+        - $ref: '#/components/schemas/Building'
+    Location:
+      type: object
+      properties:
+        address:
+          type: string
+          examples:
+            - Via Giuseppe Mazzini
+        latitude:
+          type: number
+          examples:
+            - 60.2
+        longitude:
+          type: number
+          examples:
+            - 12.12
+    PlaceType:
+      type: object
+      properties:
+        label:
+          type: string
+          examples:
+            - Library
+    Bookable:
+      type: object
+      properties:
+        label:
+          type: string
+          examples:
+            - Desk
+        slots:
+          type: integer
+          format: int64
+          examples:
+            - 20
+    Service:
+      type: object
+      properties:
+        label:
+          type: string
+          examples:
+            - Parking

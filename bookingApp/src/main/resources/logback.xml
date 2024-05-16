@@ -1,0 +1,67 @@
+<configuration>
+
+    <!-- Configuración del appender para los logs TRACE, DEBUG e INFO -->
+    <appender name="JAVA_LOGS" class="ch.qos.logback.core.FileAppender">
+        <file>logs/logs.log</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+
+
+        <!--COMMENT TO DELETE FILES UNTIL X DAYS-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Ruta base de los archivos de log -->
+            <fileNamePattern>logs/logs.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- Máximo número de archivos de log a retener -->
+            <maxHistory>7</maxHistory>
+            <!-- Eliminar archivos antiguos después de cierto período de tiempo -->
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- Retener archivos durante 7 días -->
+                <maxHistory>7</maxHistory>
+                <!-- Tamaño máximo de archivo -->
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <!--COMMENT TO DELETE FILES UNTIL X DAYS-->
+
+
+        <!--LEVEL FILTER para aceptar o descartar 1 solo nivel -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>DENY</onMatch>
+        </filter>
+
+        <!--LEVEL FILTER para aceptar o descartar 1 solo nivel -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+        </filter>
+    </appender>
+
+    <!-- Configuración del appender para los logs de tipo WARN y ERROR -->
+    <appender name="ERROR_LOGS" class="ch.qos.logback.core.FileAppender">
+        <!--este es el folder y el fichero que queremos crear-->
+        <file>logs/errors.log</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+
+        <!--it takes levels from WARN TO ERROR-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %cyan(%-5level) %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Configuración del root logger -->
+    <root level="INFO">
+        <appender-ref ref="JAVA_LOGS"/>
+        <appender-ref ref="ERROR_LOGS"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
