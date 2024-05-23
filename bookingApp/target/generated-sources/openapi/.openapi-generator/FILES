@@ -1,0 +1,16 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/gen/java/main/com/booking/generated/web/controllers/ApiUtil.java
+src/gen/java/main/com/booking/generated/web/controllers/BuildingsApi.java
+src/gen/java/main/com/booking/generated/web/model/Bookable.java
+src/gen/java/main/com/booking/generated/web/model/Booking.java
+src/gen/java/main/com/booking/generated/web/model/Building.java
+src/gen/java/main/com/booking/generated/web/model/BuildingResponse.java
+src/gen/java/main/com/booking/generated/web/model/BuildingsGet200Response.java
+src/gen/java/main/com/booking/generated/web/model/BuildingsGet404Response.java
+src/gen/java/main/com/booking/generated/web/model/DayOfWeek.java
+src/gen/java/main/com/booking/generated/web/model/Location.java
+src/gen/java/main/com/booking/generated/web/model/PaginationSummary.java
+src/gen/java/main/com/booking/generated/web/model/PlaceType.java
+src/gen/java/main/com/booking/generated/web/model/Service.java
